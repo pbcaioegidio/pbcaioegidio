@@ -1,6 +1,6 @@
 <div align="center">
 
-# 👨‍💻 Caio da Silva Egidio
+# 👨‍💻 Caio
 
 <img src="https://img.shields.io/badge/Desenvolvedor-Full%20Stack-0D1117?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Full Stack" />
 
@@ -30,9 +30,8 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
   <a href="#"><img src="https://skillicons.dev/icons?i=php,laravel,python,nodejs&perline=4" /></a>
   <br/>
   <a href="#"><img src="https://skillicons.dev/icons?i=go,java,kotlin,flutter&perline=4" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=dart,postgres,redis,docker&perline=4" /></a>
-  <br/>
-  <a href="#"><img src="https://skillicons.dev/icons?i=bash,git,github,linux&perline=4" /></a>
+  <a href="#"><img src="https://skillicons.dev/icons?i=dart,postgres,mysql,oracle,sqlite&perline=5" /></a>
+  <a href="#"><img src="https://skillicons.dev/icons?i=redis,docker,bash,git,github,linux&perline=6" /></a>
 </p>
 
 <details>
@@ -45,7 +44,8 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
 | **Front-end** | HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue.js, Tailwind CSS, Inertia.js, Blade |
 | **Back-end** | PHP, Laravel, Python, Go (Golang), Java, Node.js, APIs REST |
 | **Mobile** | Flutter, Dart, Kotlin, React Native, WebView — iOS & Android (Play Store / App Store) |
-| **Dados / Infra** | PostgreSQL, Redis, Docker, Linux, Shell (Bash) |
-| **DevOps** | Git, GitHub, GitHub Actions (CI/CD), deploy em VPS/Hostinger |
+| **Banco de dados** | PostgreSQL, MySQL, Oracle, SQLite, Redis |
+| **ERP** | Winthor |
+| **Infra / DevOps** | Docker, Linux, WSL 2 (Windows Subsystem for Linux), Shell (Bash), Git, GitHub, GitHub Actions (CI/CD), deploy em VPS/Hostinger |
 
 </details>
