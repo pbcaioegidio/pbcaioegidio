@@ -25,13 +25,7 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="" />
 
 <p align="center">
-  <a href="#"><img src="https://skillicons.dev/icons?i=html,css,js,ts&perline=4" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=react,nextjs,vue,tailwind&perline=4" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=php,laravel,python,nodejs&perline=4" /></a>
-  <br/>
-  <a href="#"><img src="https://skillicons.dev/icons?i=go,java,kotlin,flutter&perline=4" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=dart,postgres,mysql,oracle,sqlite&perline=5" /></a>
-  <a href="#"><img src="https://skillicons.dev/icons?i=redis,docker,bash,git,github,linux&perline=6" /></a>
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,tailwind,php,laravel,python,nodejs,go,java,kotlin,flutter,dart,postgres,mysql,redis,docker,bash,git,github,linux&perline=12" alt="Linguagens e tecnologias" />
 </p>
 
 <details>
