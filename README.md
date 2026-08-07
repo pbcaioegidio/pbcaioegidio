@@ -1,16 +1,51 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**pbcaioegidio/pbcaioegidio** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# 👨‍💻 Caio da Silva Egidio
 
-Here are some ideas to get you started:
+<img src="https://img.shields.io/badge/Desenvolvedor-Full%20Stack-0D1117?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Full Stack" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=520&lines=Full+Stack+Developer;Web+%26+Mobile;PHP+%7C+Laravel+%7C+Vue+%7C+React;Flutter+%26+React+Native" alt="Typing SVG" />
+
+</div>
+
+---
+
+## 👋 Olá, eu sou o Caio!
+
+Tenho formação em **Análise e Desenvolvimento de Sistemas**, pós em **Desenvolvimento Web Full Stack** e **Aplicações Mobile**, e estou cursando **Engenharia de Software**.
+
+Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces modernas, APIs, manutenção de sistemas e apps para iOS/Android. Também tenho experiência em qualidade de software (QA), testes e documentação.
+
+---
+
+## 🤖 Linguagens e Tecnologias
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="" />
+
+<p align="center">
+  <a href="#"><img src="https://skillicons.dev/icons?i=html,css,js,ts&perline=4" /></a>
+  <a href="#"><img src="https://skillicons.dev/icons?i=react,nextjs,vue,tailwind&perline=4" /></a>
+  <a href="#"><img src="https://skillicons.dev/icons?i=php,laravel,python,nodejs&perline=4" /></a>
+  <br/>
+  <a href="#"><img src="https://skillicons.dev/icons?i=go,java,kotlin,flutter&perline=4" /></a>
+  <a href="#"><img src="https://skillicons.dev/icons?i=dart,postgres,redis,docker&perline=4" /></a>
+  <br/>
+  <a href="#"><img src="https://skillicons.dev/icons?i=bash,git,github,linux&perline=4" /></a>
+</p>
+
+<details>
+<summary><b>📦 Ver lista completa</b></summary>
+
+<br/>
+
+| Área | Tecnologias |
+|------|-------------|
+| **Front-end** | HTML, CSS, JavaScript, TypeScript, React, Next.js, Vue.js, Tailwind CSS, Inertia.js, Blade |
+| **Back-end** | PHP, Laravel, Python, Go (Golang), Java, Node.js, APIs REST |
+| **Mobile** | Flutter, Dart, Kotlin, React Native, WebView — iOS & Android (Play Store / App Store) |
+| **Dados / Infra** | PostgreSQL, Redis, Docker, Linux, Shell (Bash) |
+| **DevOps** | Git, GitHub, GitHub Actions (CI/CD), deploy em VPS/Hostinger |
+
+</details>
