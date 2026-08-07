@@ -1,7 +1,5 @@
 <div align="center">
 
-# 👨‍💻 Caio
-
 <img src="https://img.shields.io/badge/Desenvolvedor-Full%20Stack-0D1117?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Full Stack" />
 
 <br/>
@@ -25,7 +23,7 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="" />
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,tailwind,php,laravel,python,nodejs,go,java,kotlin,flutter,dart,postgres,mysql,redis,docker,bash,git,github,linux&perline=12" alt="Linguagens e tecnologias" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,tailwind,php,laravel,python,nodejs,go,java,kotlin,flutter,dart,postgres,mysql,redis,docker,bash,git,github,linux&perline=13" alt="Linguagens e tecnologias" />
 </p>
 
 <details>
