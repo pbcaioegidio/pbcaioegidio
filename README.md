@@ -10,7 +10,9 @@
 
 ---
 
-## 👋 Olá, eu sou o Caio!
+<p>
+  <b>👋 Olá, eu sou o Caio!</b>
+</p>
 
 Tenho formação em **Análise e Desenvolvimento de Sistemas**, pós em **Desenvolvimento Web Full Stack** e **Aplicações Mobile**, e estou cursando **Engenharia de Software**.
 
@@ -18,7 +20,9 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
 
 ---
 
-## 🤖 Linguagens e Tecnologias
+<p>
+  <b>🤖 Linguagens e Tecnologias</b>
+</p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="" />
 
