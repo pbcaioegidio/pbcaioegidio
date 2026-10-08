@@ -1,0 +1,269 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="680" viewBox="0 0 420 680" role="img" aria-label="Celular mostrando a atividade de pbcaioegidio no GitHub">
+  <defs>
+    <clipPath id="tela"><rect x="50" y="30" width="320" height="620" rx="42" /></clipPath>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="45" /></filter>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+    <filter id="sombra" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="10" flood-color="#000000" flood-opacity="0.45" /></filter>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#FFFFFF" stroke-opacity="0.03" /></pattern>
+    <linearGradient id="moldura" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="420" y2="680">
+      <stop offset="0" stop-color="#39D353" />
+      <stop offset="0.5" stop-color="#58A6FF" />
+      <stop offset="1" stop-color="#A371F7" />
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 210.0 340.0" to="360 210.0 340.0" dur="8s" repeatCount="indefinite" />
+    </linearGradient>
+    <linearGradient id="texto" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39D353" /><stop offset="1" stop-color="#58A6FF" /></linearGradient>
+    <linearGradient id="fogo" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#F0883E" /><stop offset="1" stop-color="#F2CC60" /></linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39D353" stop-opacity="0.35" /><stop offset="1" stop-color="#39D353" stop-opacity="0" /></linearGradient>
+  </defs>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "JetBrains Mono", "Fira Code", Consolas, monospace; }
+    .blob { opacity: 0.22; animation: drift 9s ease-in-out infinite alternate; }
+    .b2 { animation-duration: 11s; animation-direction: alternate-reverse; }
+    .float { animation: float 6s ease-in-out infinite; }
+    .tela, .up, .pop, .grow, .ring, .draw, .fade, .ponto { animation-duration: 25.0s; animation-iteration-count: infinite; animation-fill-mode: both; }
+    .tela { animation-name: tela; animation-timing-function: cubic-bezier(.2,.8,.2,1); }
+    .up { animation-name: up; }
+    .pop, .fade { animation-name: pop; }
+    .grow { animation-name: grow; transform-box: fill-box; transform-origin: left center; }
+    .ring { animation-name: ring; stroke-dasharray: 1 1; }
+    .draw { animation-name: draw; stroke-dasharray: 1 1; }
+    .ponto { animation-name: ponto; transform-box: fill-box; transform-origin: center; }
+    .pulse { stroke-dasharray: 0.35 0.65; animation: trace 3s linear infinite; }
+    .flame { transform-box: fill-box; transform-origin: center bottom; animation: flicker 1.4s ease-in-out infinite; }
+    .beat { transform-box: fill-box; transform-origin: center; animation: beat 1.6s ease-in-out infinite; }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes tela {
+      0% { opacity: 0; transform: translateX(60px); }
+      1.20% { opacity: 1; transform: translateX(0); }
+      18.80% { opacity: 1; transform: translateX(0); }
+      20.00%, 100% { opacity: 0; transform: translateX(-60px); }
+    }
+    @keyframes up { 0%, 1.20% { opacity: 0; transform: translateY(12px); } 4.40%, 100% { opacity: 1; transform: translateY(0); } }
+    @keyframes pop { 0%, 1.20% { opacity: 0; } 4.00%, 100% { opacity: 1; } }
+    @keyframes grow { 0%, 1.20% { transform: scaleX(0); } 6.00%, 100% { transform: scaleX(1); } }
+    @keyframes ring { 0%, 1.20% { stroke-dashoffset: 1; } 7.00%, 100% { stroke-dashoffset: var(--alvo); } }
+    @keyframes draw { 0%, 1.20% { stroke-dashoffset: 1; } 8.00%, 100% { stroke-dashoffset: 0; } }
+    @keyframes ponto { 0%, 20.00% { opacity: 1; transform: scaleX(2.2); } 20.01%, 100% { opacity: 0.25; transform: scaleX(1); } }
+    @keyframes trace { from { stroke-dashoffset: 1; } to { stroke-dashoffset: -1; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes drift { from { transform: translate(0, 0); } to { transform: translate(40px, 30px); } }
+    @keyframes flicker { 0%, 100% { transform: scale(1, 1); } 50% { transform: scale(0.92, 1.08); } }
+    @keyframes beat { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.8); opacity: 0.5; } }
+    @keyframes blink { 50% { opacity: 0; } }
+  </style>
+
+  <g class="float">
+    <rect x="38" y="18" width="344" height="644" rx="54" fill="url(#moldura)" filter="url(#sombra)" />
+    <rect x="40" y="20" width="340" height="640" rx="52" fill="#161B22" />
+    <rect x="37" y="150" width="3" height="40" rx="1.5" fill="#30363D" />
+    <rect x="37" y="200" width="3" height="60" rx="1.5" fill="#30363D" />
+    <rect x="380" y="180" width="3" height="80" rx="1.5" fill="#30363D" />
+    <rect x="50" y="30" width="320" height="620" rx="42" fill="#0B0F17" />
+    <g clip-path="url(#tela)">
+      <rect x="50" y="30" width="320" height="620" fill="url(#grid)" />
+      <circle class="blob" cx="90" cy="90" r="90" fill="#39D353" filter="url(#blur)" />
+      
+    <g class="tela" style="animation-delay: 0.00s">
+      <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">VISÃO GERAL</text>
+      <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Último ano</text>
+      <text class="mono up" x="74" y="170" font-size="11" fill="#39D353" style="animation-delay: 0.10s">~/pbcaioegidio <tspan fill="#8B949E">$ git log</tspan><tspan class="cursor"> ▋</tspan></text>
+      <g class="up" style="animation-delay: 0.20s">
+        <text x="72" y="236" font-size="60" font-weight="800" fill="url(#texto)" filter="url(#glow)">156</text>
+        <text x="74" y="260" font-size="13" fill="#C9D1D9">contribuições no último ano</text>
+      </g>
+      <path d="M74 300 H130 l7 -7 l5 12 l8 -38 l8 48 l6 -20 l5 3 H236 l7 -5 l5 10 l8 -30 l8 40 l6 -16 l5 1 H346" fill="none" stroke="#30363D" stroke-width="2" stroke-linejoin="round" />
+      <path class="pulse" d="M74 300 H130 l7 -7 l5 12 l8 -38 l8 48 l6 -20 l5 3 H236 l7 -5 l5 10 l8 -30 l8 40 l6 -16 l5 1 H346" pathLength="1" fill="none" stroke="url(#texto)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" filter="url(#glow)" />
+      
+      <g class="up" style="animation-delay: 0.30s">
+        <rect x="74" y="340" width="132" height="82" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08" />
+        <rect x="74" y="358" width="3" height="46" rx="1.5" fill="#39D353" filter="url(#glow)" />
+        <text x="92" y="384" font-size="28" font-weight="800" fill="#F0F6FC">6</text>
+        <text x="92" y="406" font-size="11" fill="#8B949E">commits em outubro</text>
+      </g>
+      <g class="up" style="animation-delay: 0.40s">
+        <rect x="214" y="340" width="132" height="82" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08" />
+        <rect x="214" y="358" width="3" height="46" rx="1.5" fill="#58A6FF" filter="url(#glow)" />
+        <text x="232" y="384" font-size="28" font-weight="800" fill="#F0F6FC">1</text>
+        <text x="232" y="406" font-size="11" fill="#8B949E">PRs no mês</text>
+      </g>
+      <g class="up" style="animation-delay: 0.50s">
+        <rect x="74" y="432" width="132" height="82" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08" />
+        <rect x="74" y="450" width="3" height="46" rx="1.5" fill="#A371F7" filter="url(#glow)" />
+        <text x="92" y="476" font-size="28" font-weight="800" fill="#F0F6FC">14</text>
+        <text x="92" y="498" font-size="11" fill="#8B949E">mergeados no mês</text>
+      </g>
+      <g class="up" style="animation-delay: 0.60s">
+        <rect x="214" y="432" width="132" height="82" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08" />
+        <rect x="214" y="450" width="3" height="46" rx="1.5" fill="#F0883E" filter="url(#glow)" />
+        <text x="232" y="476" font-size="28" font-weight="800" fill="#F0F6FC">1</text>
+        <text x="232" y="498" font-size="11" fill="#8B949E">repos no mês</text>
+      </g>
+      <g class="up" style="animation-delay: 0.70s">
+        <circle class="beat" cx="78" cy="540" r="3.5" fill="#39D353" />
+        <text class="mono" x="88" y="544" font-size="10" fill="#8B949E">ao vivo · atualizado 08/10 15:20</text>
+      </g>
+    </g>
+    <g class="tela" style="animation-delay: -20.00s">
+      <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">OUTUBRO 2026</text>
+      <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Commits</text>
+      <g class="up" style="animation-delay: -19.90s">
+        <text x="74" y="178" font-size="13" fill="#8B949E"><tspan font-size="22" font-weight="800" fill="#F0F6FC">6</tspan>  commits em 1 repositórios</text>
+      </g>
+      <rect class="grow" x="74.0" y="196" width="270.0" height="10" rx="3" fill="#A371F7" style="animation-delay: -19.80s" />
+      <g class="up" style="animation-delay: -19.70s"><rect x="74" y="222" width="8" height="8" rx="2" fill="#A371F7" />
+        <text x="87" y="230" font-size="10" fill="#C9D1D9">WiiD <tspan fill="#6E7681">6</tspan></text></g>
+      
+      <g class="up" style="animation-delay: -19.60s">
+        <text class="mono" x="74" y="268" font-size="10" fill="#A371F7">01</text>
+        <text x="96" y="268" font-size="12" font-weight="600" fill="#F0F6FC">SISTEMA_ARQUIVO_FRONT</text>
+        <text class="mono" x="346" y="268" font-size="11" text-anchor="end"><tspan fill="#F0F6FC" font-weight="700">6</tspan><tspan fill="#6E7681"> · 100%</tspan></text>
+        <rect x="96" y="275" width="250" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="96" y="275" width="250.0" height="4" rx="2" fill="#A371F7" style="animation-delay: -19.40s" />
+      </g>
+    </g>
+    <g class="tela" style="animation-delay: -15.00s">
+      <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">STREAK</text>
+      <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Sequência</text>
+      <circle cx="210.0" cy="226" r="60" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="12" />
+      <circle class="ring" cx="210.0" cy="226" r="60" pathLength="1" fill="none" stroke="url(#fogo)" stroke-width="12" stroke-linecap="round"
+        transform="rotate(-90 210.0 226)" filter="url(#glow)" style="--alvo: 0.429; animation-delay: -14.80s" />
+      <path class="flame" d="M210.0 182 c7 9 13 14 13 22 a13 13 0 0 1 -26 0 c0 -6 4 -9 6 -13 c1 5 3 7 5 7 c0 -6 -1 -10 2 -16z" fill="url(#fogo)" />
+      <text x="210.0" y="248" font-size="34" font-weight="800" fill="#F0F6FC" text-anchor="middle">4</text>
+      <text x="210.0" y="264" font-size="10" fill="#8B949E" text-anchor="middle">dias de recorde</text>
+      
+      <g class="up" style="animation-delay: -14.60s">
+        <text x="74" y="326" font-size="12" fill="#8B949E">Contribuições públicas</text>
+        <text x="346" y="326" font-size="12" font-weight="700" fill="#F0F6FC" text-anchor="end">156</text>
+      </g>
+      <g class="up" style="animation-delay: -14.50s">
+        <text x="74" y="352" font-size="12" fill="#8B949E">Sequência atual</text>
+        <text x="346" y="352" font-size="12" font-weight="700" fill="#F0F6FC" text-anchor="end">0 dias</text>
+      </g>
+      <g class="up" style="animation-delay: -14.40s">
+        <text x="74" y="378" font-size="12" fill="#8B949E">Recorde</text>
+        <text x="346" y="378" font-size="12" font-weight="700" fill="#F0F6FC" text-anchor="end">31/08 – 03/09</text>
+      </g>
+      <text class="mono" x="74" y="426" font-size="9" fill="#6E7681" letter-spacing="1">ÚLTIMAS 17 SEMANAS</text>
+      <rect class="pop" x="74" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="74" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.40s" /><rect class="pop" x="90" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="90" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.34s" /><rect class="pop" x="106" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="454" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="470" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.28s" /><rect class="pop" x="106" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.28s" /><rect class="pop" x="122" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="122" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.22s" /><rect class="pop" x="138" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="138" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.16s" /><rect class="pop" x="154" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="154" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.10s" /><rect class="pop" x="170" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="502" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -14.04s" /><rect class="pop" x="170" y="534" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -14.04s" /><rect class="pop" x="186" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="486" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="502" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="518" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.98s" /><rect class="pop" x="186" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.98s" /><rect class="pop" x="202" y="438" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="486" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.92s" /><rect class="pop" x="202" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.92s" /><rect class="pop" x="218" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="470" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="518" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.86s" /><rect class="pop" x="218" y="534" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.86s" /><rect class="pop" x="234" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.80s" /><rect class="pop" x="234" y="534" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.80s" /><rect class="pop" x="250" y="438" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="486" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="502" width="13" height="13" rx="3" fill="#39D353" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="518" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.74s" /><rect class="pop" x="250" y="534" width="13" height="13" rx="3" fill="#26A641" style="animation-delay: -13.74s" /><rect class="pop" x="266" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="502" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="266" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.68s" /><rect class="pop" x="282" y="438" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="486" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="502" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.62s" /><rect class="pop" x="282" y="534" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.62s" /><rect class="pop" x="298" y="438" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="486" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.56s" /><rect class="pop" x="298" y="534" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.56s" /><rect class="pop" x="314" y="438" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="486" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="502" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="518" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.50s" /><rect class="pop" x="314" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.50s" /><rect class="pop" x="330" y="438" width="13" height="13" rx="3" fill="#0E4429" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="454" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="470" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="486" width="13" height="13" rx="3" fill="#006D32" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="502" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="518" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.44s" /><rect class="pop" x="330" y="534" width="13" height="13" rx="3" fill="#161B22" style="animation-delay: -13.44s" />
+    </g>
+    <g class="tela" style="animation-delay: -10.00s">
+      <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">GITHUB</text>
+      <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Estatísticas</text>
+      <g class="up" style="animation-delay: -9.90s">
+        <text x="72" y="206" font-size="58" font-weight="800" fill="url(#texto)" filter="url(#glow)">148</text>
+        <text x="74" y="226" font-size="11" fill="#8B949E">commits públicos no último ano</text>
+      </g>
+      <path class="fade" d="M74.0 300.0 L98.7 299.2 L123.5 300.0 L148.2 286.5 L172.9 300.0 L197.6 300.0 L222.4 300.0 L247.1 290.5 L271.8 298.4 L296.5 269.0 L321.3 238.0 L346.0 294.4 L346 300 L74 300 Z" fill="url(#area)" style="animation-delay: -9.40s" />
+      <path class="draw" d="M74.0 300.0 L98.7 299.2 L123.5 300.0 L148.2 286.5 L172.9 300.0 L197.6 300.0 L222.4 300.0 L247.1 290.5 L271.8 298.4 L296.5 269.0 L321.3 238.0 L346.0 294.4" pathLength="1" fill="none" stroke="#39D353" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" style="animation-delay: -9.80s" />
+      <circle class="beat" cx="346.0" cy="294.4" r="4" fill="#39D353" />
+      <text x="74" y="316" font-size="9" fill="#6E7681">12 meses atrás</text>
+      <text x="346" y="316" font-size="9" fill="#6E7681" text-anchor="end">hoje</text>
+      
+      <g class="up" style="animation-delay: -9.50s">
+        <rect x="74" y="340" width="272" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.04" />
+        <rect x="84" y="350" width="22" height="22" rx="7" fill="#58A6FF" fill-opacity="0.15" />
+        <path d="M4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 4v6m8-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 4c0 3-2 4-5 4" transform="translate(87 353)" fill="none" stroke="#58A6FF" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="118" y="366" font-size="13" fill="#C9D1D9">Pull requests</text>
+        <text x="334" y="366" font-size="14" font-weight="700" fill="#F0F6FC" text-anchor="end">1</text>
+      </g>
+      <g class="up" style="animation-delay: -9.40s">
+        <rect x="74" y="390" width="272" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.04" />
+        <rect x="84" y="400" width="22" height="22" rx="7" fill="#F2CC60" fill-opacity="0.15" />
+        <path d="M8 1l2 4.5 5 .5-3.8 3.3 1.1 4.9L8 11.8 3.7 14.2l1.1-4.9L1 6l5-.5z" transform="translate(87 403)" fill="none" stroke="#F2CC60" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="118" y="416" font-size="13" fill="#C9D1D9">Estrelas</text>
+        <text x="334" y="416" font-size="14" font-weight="700" fill="#F0F6FC" text-anchor="end">8</text>
+      </g>
+      <g class="up" style="animation-delay: -9.30s">
+        <rect x="74" y="440" width="272" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.04" />
+        <rect x="84" y="450" width="22" height="22" rx="7" fill="#F778BA" fill-opacity="0.15" />
+        <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 4v4m0 2v1" transform="translate(87 453)" fill="none" stroke="#F778BA" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="118" y="466" font-size="13" fill="#C9D1D9">Issues</text>
+        <text x="334" y="466" font-size="14" font-weight="700" fill="#F0F6FC" text-anchor="end">0</text>
+      </g>
+      <g class="up" style="animation-delay: -9.20s">
+        <rect x="74" y="490" width="272" height="42" rx="12" fill="#FFFFFF" fill-opacity="0.04" />
+        <rect x="84" y="500" width="22" height="22" rx="7" fill="#A371F7" fill-opacity="0.15" />
+        <path d="M3 2h8l2 2v10H3zM5 6h6M5 9h6M5 12h4" transform="translate(87 503)" fill="none" stroke="#A371F7" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="118" y="516" font-size="13" fill="#C9D1D9">Contribuiu em</text>
+        <text x="334" y="516" font-size="14" font-weight="700" fill="#F0F6FC" text-anchor="end">28 repos</text>
+      </g>
+    </g>
+    <g class="tela" style="animation-delay: -5.00s">
+      <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">TOP 8</text>
+      <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Linguagens</text>
+      <mask id="revela"><circle class="ring" cx="210.0" cy="222" r="62" pathLength="1" fill="none" stroke="#FFFFFF" stroke-width="22"
+        transform="rotate(-90 210.0 222)" style="--alvo: 0; animation-delay: -4.90s" /></mask>
+      <circle cx="210.0" cy="222" r="62" fill="none" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="18" />
+      <g mask="url(#revela)"><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#7355dd" stroke-width="18" stroke-dasharray="45.85 100" stroke-dashoffset="-0.00" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#336790" stroke-width="18" stroke-dasharray="40.31 100" stroke-dashoffset="-46.45" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#f1e05a" stroke-width="18" stroke-dasharray="3.68 100" stroke-dashoffset="-87.36" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#4F5D95" stroke-width="18" stroke-dasharray="2.89 100" stroke-dashoffset="-91.64" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#41b883" stroke-width="18" stroke-dasharray="1.74 100" stroke-dashoffset="-95.13" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#012456" stroke-width="18" stroke-dasharray="0.58 100" stroke-dashoffset="-97.47" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#f7523f" stroke-width="18" stroke-dasharray="0.31 100" stroke-dashoffset="-98.66" transform="rotate(-90 210.0 222)" /><circle cx="210.0" cy="222" r="62" pathLength="100" fill="none" stroke="#f34b7d" stroke-width="18" stroke-dasharray="0.30 100" stroke-dashoffset="-99.57" transform="rotate(-90 210.0 222)" /></g>
+      <text x="210.0" y="226" font-size="24" font-weight="800" fill="#F0F6FC" text-anchor="middle">C#</text>
+      <text class="mono" x="210.0" y="244" font-size="11" fill="#8B949E" text-anchor="middle">45.7%</text>
+      
+      <g class="up" style="animation-delay: -4.60s">
+        <circle cx="78" cy="326" r="4" fill="#7355dd" />
+        <text x="90" y="330" font-size="12" fill="#C9D1D9">C#</text>
+        <text class="mono" x="346" y="330" font-size="10.5" fill="#8B949E" text-anchor="end">45.7%</text>
+        <rect x="90" y="337" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="337" width="256.0" height="3" rx="1.5" fill="#7355dd" style="animation-delay: -4.40s" />
+      </g>
+      <g class="up" style="animation-delay: -4.53s">
+        <circle cx="78" cy="356" r="4" fill="#336790" />
+        <text x="90" y="360" font-size="12" fill="#C9D1D9">PLpgSQL</text>
+        <text class="mono" x="346" y="360" font-size="10.5" fill="#8B949E" text-anchor="end">40.3%</text>
+        <rect x="90" y="367" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="367" width="225.4" height="3" rx="1.5" fill="#336790" style="animation-delay: -4.33s" />
+      </g>
+      <g class="up" style="animation-delay: -4.46s">
+        <circle cx="78" cy="386" r="4" fill="#f1e05a" />
+        <text x="90" y="390" font-size="12" fill="#C9D1D9">JavaScript</text>
+        <text class="mono" x="346" y="390" font-size="10.5" fill="#8B949E" text-anchor="end">4.2%</text>
+        <rect x="90" y="397" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="397" width="23.6" height="3" rx="1.5" fill="#f1e05a" style="animation-delay: -4.26s" />
+      </g>
+      <g class="up" style="animation-delay: -4.39s">
+        <circle cx="78" cy="416" r="4" fill="#4F5D95" />
+        <text x="90" y="420" font-size="12" fill="#C9D1D9">PHP</text>
+        <text class="mono" x="346" y="420" font-size="10.5" fill="#8B949E" text-anchor="end">3.4%</text>
+        <rect x="90" y="427" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="427" width="19.2" height="3" rx="1.5" fill="#4F5D95" style="animation-delay: -4.19s" />
+      </g>
+      <g class="up" style="animation-delay: -4.32s">
+        <circle cx="78" cy="446" r="4" fill="#41b883" />
+        <text x="90" y="450" font-size="12" fill="#C9D1D9">Vue</text>
+        <text class="mono" x="346" y="450" font-size="10.5" fill="#8B949E" text-anchor="end">2.3%</text>
+        <rect x="90" y="457" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="457" width="12.9" height="3" rx="1.5" fill="#41b883" style="animation-delay: -4.12s" />
+      </g>
+      <g class="up" style="animation-delay: -4.25s">
+        <circle cx="78" cy="476" r="4" fill="#012456" />
+        <text x="90" y="480" font-size="12" fill="#C9D1D9">PowerShell</text>
+        <text class="mono" x="346" y="480" font-size="10.5" fill="#8B949E" text-anchor="end">1.2%</text>
+        <rect x="90" y="487" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="487" width="6.5" height="3" rx="1.5" fill="#012456" style="animation-delay: -4.05s" />
+      </g>
+      <g class="up" style="animation-delay: -4.18s">
+        <circle cx="78" cy="506" r="4" fill="#f7523f" />
+        <text x="90" y="510" font-size="12" fill="#C9D1D9">Blade</text>
+        <text class="mono" x="346" y="510" font-size="10.5" fill="#8B949E" text-anchor="end">0.9%</text>
+        <rect x="90" y="517" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="517" width="5.0" height="3" rx="1.5" fill="#f7523f" style="animation-delay: -3.98s" />
+      </g>
+      <g class="up" style="animation-delay: -4.11s">
+        <circle cx="78" cy="536" r="4" fill="#f34b7d" />
+        <text x="90" y="540" font-size="12" fill="#C9D1D9">C++</text>
+        <text class="mono" x="346" y="540" font-size="10.5" fill="#8B949E" text-anchor="end">0.4%</text>
+        <rect x="90" y="547" width="256" height="3" rx="1.5" fill="#FFFFFF" fill-opacity="0.06" />
+        <rect class="grow" x="90" y="547" width="4.0" height="3" rx="1.5" fill="#f34b7d" style="animation-delay: -3.91s" />
+      </g>
+    </g>
+    </g>
+    <text class="mono" x="80" y="62" font-size="12" font-weight="700" fill="#F0F6FC">15:20</text>
+    <rect x="162.0" y="44" width="96" height="28" rx="14" fill="#000000" />
+    <circle cx="240.0" cy="58" r="4" fill="#1F2A3A" />
+    <path d="M288 62 h3 v-3 h-3z M293 62 h3 v-6 h-3z M298 62 h3 v-9 h-3z" fill="#F0F6FC" />
+    <rect x="316" y="52" width="24" height="12" rx="3.5" fill="none" stroke="#F0F6FC" stroke-opacity="0.7" />
+    <rect x="318" y="54" width="16" height="8" rx="2" fill="#39D353" />
+    <rect class="ponto" x="171.0" y="606" width="6" height="6" rx="3" fill="#F0F6FC" style="animation-delay: 0.00s" /><rect class="ponto" x="189.0" y="606" width="6" height="6" rx="3" fill="#F0F6FC" style="animation-delay: -20.00s" /><rect class="ponto" x="207.0" y="606" width="6" height="6" rx="3" fill="#F0F6FC" style="animation-delay: -15.00s" /><rect class="ponto" x="225.0" y="606" width="6" height="6" rx="3" fill="#F0F6FC" style="animation-delay: -10.00s" /><rect class="ponto" x="243.0" y="606" width="6" height="6" rx="3" fill="#F0F6FC" style="animation-delay: -5.00s" />
+    <rect x="160.0" y="636" width="100" height="5" rx="2.5" fill="#F0F6FC" fill-opacity="0.4" />
+  </g>
+</svg>

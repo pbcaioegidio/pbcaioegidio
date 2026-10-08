@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=560&lines=Full+Stack+Developer;Web+%26+Mobile;PHP+%7C+Laravel+%7C+Vue+%7C+React;C%23+%7C+.NET+%7C+Node+%7C+Discord.js;Flutter+%26+React+Native" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=560&lines=Full+Stack+Developer;Web+%26+Mobile;PHP+%7C+Laravel+%7C+Vue+%7C+React;C%23+%7C+.NET+%7C+Go+%7C+Node;Flutter+%26+React+Native;DevOps+%7C+CI%2FCD+%7C+Docker" alt="Typing SVG" />
 
 </div>
 
@@ -14,9 +14,12 @@
   <b>👋 Olá, eu sou o Caio!</b>
 </p>
 
-Tenho formação em **Análise e Desenvolvimento de Sistemas**, pós em **Desenvolvimento Web Full Stack** e **Aplicações Mobile**, e estou cursando **Engenharia de Software**.
+Desenvolvedor **Full Stack & Mobile**, formado em **Análise e Desenvolvimento de Sistemas**, pós em **Desenvolvimento Web Full Stack** e **Aplicações Mobile**, cursando **Engenharia de Software**.
 
-Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces modernas, APIs, manutenção de sistemas e apps para iOS/Android. Também tenho experiência em qualidade de software (QA), testes e documentação.
+- 🛠️ **Web e APIs** — sistemas, painéis e APIs com Laravel, Vue, React, Node, Go e C#/.NET.
+- 📱 **Mobile** — apps Flutter e React Native publicados na Play Store e App Store.
+- 🚀 **CI/CD e deploy** — pipelines no GitHub Actions com testes e deploy em homologação e produção, Docker e VPS.
+- ✅ **Qualidade** — QA, testes e documentação.
 
 ---
 
@@ -45,3 +48,13 @@ Atuo com desenvolvimento **web full stack** e **mobile**, criando interfaces mod
 | **Infra / DevOps** | Docker, Docker Compose, Linux, WSL 2, Shell (Bash), PowerShell, Git, GitHub, GitHub Actions (CI/CD), deploy em VPS / Hostinger / Oracle Cloud |
 
 </details>
+
+---
+
+<p>
+  <b>📊 Atividade no GitHub</b>
+</p>
+
+<p align="center">
+  <img src="./assets/celular.svg" width="420" alt="Celular mostrando a atividade no GitHub" />
+</p>

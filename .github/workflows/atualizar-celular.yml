@@ -1,0 +1,44 @@
+name: Atualizar celular do README
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - scripts/**
+      - .github/workflows/atualizar-celular.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-celular
+  cancel-in-progress: true
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar celular.svg
+        env:
+          # GH_PAT (token pessoal) enxerga contribuições privadas; sem ele usa o token do Actions (só dados públicos)
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GITHUB_USUARIO: ${{ github.repository_owner }}
+        run: python3 scripts/gerar_cards.py
+
+      - name: Commit se mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/celular.svg
+          git diff --cached --quiet || (git commit -m "chore: atualiza celular do README" && git push)
