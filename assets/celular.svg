@@ -69,7 +69,7 @@
       <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Último ano</text>
       <text class="mono up" x="74" y="170" font-size="11" fill="#39D353" style="animation-delay: 0.10s">~/pbcaioegidio <tspan fill="#8B949E">$ git log</tspan><tspan class="cursor"> ▋</tspan></text>
       <g class="up" style="animation-delay: 0.20s">
-        <text x="72" y="236" font-size="60" font-weight="800" fill="url(#texto)" filter="url(#glow)">2.671</text>
+        <text x="72" y="236" font-size="60" font-weight="800" fill="url(#texto)" filter="url(#glow)">2.672</text>
         <text x="74" y="260" font-size="13" fill="#C9D1D9">contribuições no último ano</text>
       </g>
       <path d="M74 300 H130 l7 -7 l5 12 l8 -38 l8 48 l6 -20 l5 3 H236 l7 -5 l5 10 l8 -30 l8 40 l6 -16 l5 1 H346" fill="none" stroke="#30363D" stroke-width="2" stroke-linejoin="round" />
@@ -78,7 +78,7 @@
       <g class="up" style="animation-delay: 0.30s">
         <rect x="74" y="340" width="132" height="82" rx="14" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.08" />
         <rect x="74" y="358" width="3" height="46" rx="1.5" fill="#39D353" filter="url(#glow)" />
-        <text x="92" y="384" font-size="28" font-weight="800" fill="#F0F6FC">115</text>
+        <text x="92" y="384" font-size="28" font-weight="800" fill="#F0F6FC">116</text>
         <text x="92" y="406" font-size="11" fill="#8B949E">commits em outubro</text>
       </g>
       <g class="up" style="animation-delay: 0.40s">
@@ -101,22 +101,22 @@
       </g>
       <g class="up" style="animation-delay: 0.70s">
         <circle class="beat" cx="78" cy="540" r="3.5" fill="#39D353" />
-        <text class="mono" x="88" y="544" font-size="10" fill="#8B949E">ao vivo · atualizado 09/10 12:49</text>
+        <text class="mono" x="88" y="544" font-size="10" fill="#8B949E">ao vivo · atualizado 09/10 12:52</text>
       </g>
     </g>
     <g class="tela" style="animation-delay: -20.00s">
       <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">OUTUBRO 2026</text>
       <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Commits</text>
       <g class="up" style="animation-delay: -19.90s">
-        <text x="74" y="178" font-size="13" fill="#8B949E"><tspan font-size="22" font-weight="800" fill="#F0F6FC">115</tspan>  commits em 10 repositórios</text>
+        <text x="74" y="178" font-size="13" fill="#8B949E"><tspan font-size="22" font-weight="800" fill="#F0F6FC">116</tspan>  commits em 10 repositórios</text>
       </g>
-      <rect class="grow" x="74.0" y="196" width="151.7" height="10" rx="3" fill="#39D353" style="animation-delay: -19.80s" /><rect class="grow" x="227.7" y="196" width="61.9" height="10" rx="3" fill="#58A6FF" style="animation-delay: -19.70s" /><rect class="grow" x="291.6" y="196" width="35.8" height="10" rx="3" fill="#A371F7" style="animation-delay: -19.60s" /><rect class="grow" x="329.4" y="196" width="7.5" height="10" rx="3" fill="#F0883E" style="animation-delay: -19.50s" /><rect class="grow" x="338.9" y="196" width="5.1" height="10" rx="3" fill="#F778BA" style="animation-delay: -19.40s" />
+      <rect class="grow" x="74.0" y="196" width="150.4" height="10" rx="3" fill="#39D353" style="animation-delay: -19.80s" /><rect class="grow" x="226.4" y="196" width="61.3" height="10" rx="3" fill="#58A6FF" style="animation-delay: -19.70s" /><rect class="grow" x="289.7" y="196" width="35.5" height="10" rx="3" fill="#A371F7" style="animation-delay: -19.60s" /><rect class="grow" x="327.2" y="196" width="7.4" height="10" rx="3" fill="#F0883E" style="animation-delay: -19.50s" /><rect class="grow" x="336.6" y="196" width="7.4" height="10" rx="3" fill="#F778BA" style="animation-delay: -19.40s" />
       <g class="up" style="animation-delay: -19.70s"><rect x="74" y="222" width="8" height="8" rx="2" fill="#39D353" />
         <text x="87" y="230" font-size="10" fill="#C9D1D9">BsTechSolution <tspan fill="#6E7681">65</tspan></text></g><g class="up" style="animation-delay: -19.65s"><rect x="214" y="222" width="8" height="8" rx="2" fill="#58A6FF" />
         <text x="227" y="230" font-size="10" fill="#C9D1D9">biglar <tspan fill="#6E7681">27</tspan></text></g><g class="up" style="animation-delay: -19.60s"><rect x="74" y="240" width="8" height="8" rx="2" fill="#A371F7" />
         <text x="87" y="248" font-size="10" fill="#C9D1D9">WiiD <tspan fill="#6E7681">16</tspan></text></g><g class="up" style="animation-delay: -19.55s"><rect x="214" y="240" width="8" height="8" rx="2" fill="#F0883E" />
         <text x="227" y="248" font-size="10" fill="#C9D1D9">consimples <tspan fill="#6E7681">4</tspan></text></g><g class="up" style="animation-delay: -19.50s"><rect x="74" y="258" width="8" height="8" rx="2" fill="#F778BA" />
-        <text x="87" y="266" font-size="10" fill="#C9D1D9">Pessoal <tspan fill="#6E7681">3</tspan></text></g>
+        <text x="87" y="266" font-size="10" fill="#C9D1D9">Pessoal <tspan fill="#6E7681">4</tspan></text></g>
       
       <g class="up" style="animation-delay: -19.60s">
         <text class="mono" x="74" y="304" font-size="10" fill="#39D353">01</text>
@@ -169,10 +169,10 @@
       </g>
       <g class="up" style="animation-delay: -19.11s">
         <text class="mono" x="74" y="528" font-size="10" fill="#F778BA">08</text>
-        <text x="96" y="528" font-size="12" font-weight="600" fill="#F0F6FC">discord-bot</text>
-        <text class="mono" x="346" y="528" font-size="11" text-anchor="end"><tspan fill="#F0F6FC" font-weight="700">1</tspan><tspan fill="#6E7681"> · 1%</tspan></text>
+        <text x="96" y="528" font-size="12" font-weight="600" fill="#F0F6FC">pbcaioegidio</text>
+        <text class="mono" x="346" y="528" font-size="11" text-anchor="end"><tspan fill="#F0F6FC" font-weight="700">2</tspan><tspan fill="#6E7681"> · 2%</tspan></text>
         <rect x="96" y="535" width="250" height="4" rx="2" fill="#FFFFFF" fill-opacity="0.06" />
-        <rect class="grow" x="96" y="535" width="5.8" height="4" rx="2" fill="#F778BA" style="animation-delay: -18.91s" />
+        <rect class="grow" x="96" y="535" width="8.2" height="4" rx="2" fill="#F778BA" style="animation-delay: -18.91s" />
       </g>
     </g>
     <g class="tela" style="animation-delay: -15.00s">
@@ -187,7 +187,7 @@
       
       <g class="up" style="animation-delay: -14.60s">
         <text x="74" y="326" font-size="12" fill="#8B949E">Contribuições no ano</text>
-        <text x="346" y="326" font-size="12" font-weight="700" fill="#F0F6FC" text-anchor="end">2.671</text>
+        <text x="346" y="326" font-size="12" font-weight="700" fill="#F0F6FC" text-anchor="end">2.672</text>
       </g>
       <g class="up" style="animation-delay: -14.50s">
         <text x="74" y="352" font-size="12" fill="#8B949E">Sequência atual</text>
@@ -204,12 +204,12 @@
       <text class="mono" x="74" y="104" font-size="10" fill="#39D353" letter-spacing="1.2">GITHUB</text>
       <text x="74" y="134" font-size="26" font-weight="800" fill="#F0F6FC">Estatísticas</text>
       <g class="up" style="animation-delay: -9.90s">
-        <text x="72" y="206" font-size="58" font-weight="800" fill="url(#texto)" filter="url(#glow)">2513</text>
+        <text x="72" y="206" font-size="58" font-weight="800" fill="url(#texto)" filter="url(#glow)">2514</text>
         <text x="74" y="226" font-size="11" fill="#8B949E">commits no último ano</text>
       </g>
-      <path class="fade" d="M74.0 289.8 L98.7 269.6 L123.5 271.6 L148.2 275.8 L172.9 279.8 L197.6 287.8 L222.4 265.0 L247.1 268.0 L271.8 265.4 L296.5 274.8 L321.3 238.0 L346.0 284.8 L346 300 L74 300 Z" fill="url(#area)" style="animation-delay: -9.40s" />
-      <path class="draw" d="M74.0 289.8 L98.7 269.6 L123.5 271.6 L148.2 275.8 L172.9 279.8 L197.6 287.8 L222.4 265.0 L247.1 268.0 L271.8 265.4 L296.5 274.8 L321.3 238.0 L346.0 284.8" pathLength="1" fill="none" stroke="#39D353" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" style="animation-delay: -9.80s" />
-      <circle class="beat" cx="346.0" cy="284.8" r="4" fill="#39D353" />
+      <path class="fade" d="M74.0 289.8 L98.7 269.6 L123.5 271.6 L148.2 275.8 L172.9 279.8 L197.6 287.8 L222.4 265.0 L247.1 268.1 L271.8 265.4 L296.5 274.8 L321.3 238.0 L346.0 284.7 L346 300 L74 300 Z" fill="url(#area)" style="animation-delay: -9.40s" />
+      <path class="draw" d="M74.0 289.8 L98.7 269.6 L123.5 271.6 L148.2 275.8 L172.9 279.8 L197.6 287.8 L222.4 265.0 L247.1 268.1 L271.8 265.4 L296.5 274.8 L321.3 238.0 L346.0 284.7" pathLength="1" fill="none" stroke="#39D353" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" style="animation-delay: -9.80s" />
+      <circle class="beat" cx="346.0" cy="284.7" r="4" fill="#39D353" />
       <text x="74" y="316" font-size="9" fill="#6E7681">12 meses atrás</text>
       <text x="346" y="316" font-size="9" fill="#6E7681" text-anchor="end">hoje</text>
       
@@ -310,7 +310,7 @@
       </g>
     </g>
     </g>
-    <text class="mono" x="80" y="62" font-size="12" font-weight="700" fill="#F0F6FC">12:49</text>
+    <text class="mono" x="80" y="62" font-size="12" font-weight="700" fill="#F0F6FC">12:52</text>
     <rect x="162.0" y="44" width="96" height="28" rx="14" fill="#000000" />
     <circle cx="240.0" cy="58" r="4" fill="#1F2A3A" />
     <path d="M288 62 h3 v-3 h-3z M293 62 h3 v-6 h-3z M298 62 h3 v-9 h-3z" fill="#F0F6FC" />
