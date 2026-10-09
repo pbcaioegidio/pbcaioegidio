@@ -2,7 +2,8 @@ name: Atualizar celular do README
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    # Minutos "quebrados": no início da hora o GitHub atrasa ou pula agendamentos
+    - cron: "7,37 * * * *"
   workflow_dispatch:
   push:
     branches:
@@ -21,7 +22,7 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
 

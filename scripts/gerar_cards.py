@@ -7,7 +7,8 @@ via login local ou variável GH_TOKEN). O GitHub Actions roda isto a cada hora.
 import json
 import os
 import subprocess
-from datetime import datetime
+import time
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -56,6 +57,38 @@ query($login: String!, $inicioMes: DateTime!, $agora: DateTime!, $buscaMerged: S
 """
 
 
+def buscar_search(endpoint, consulta):
+    """Busca paginada na API de search (enxerga repositórios privados se o token tiver acesso)."""
+    itens, pagina = [], 1
+    while True:
+        time.sleep(2.2)
+        saida = subprocess.run(
+            ["gh", "api", "-X", "GET", f"search/{endpoint}", "-f", f"q={consulta}", "-f", "per_page=100", "-f", f"page={pagina}"],
+            capture_output=True, text=True, check=True,
+        )
+        dados = json.loads(saida.stdout)
+        itens += dados["items"]
+        if len(dados["items"]) < 100 or len(itens) >= min(dados["total_count"], 1000):
+            return itens, dados["total_count"]
+        pagina += 1
+
+
+def contar_search(endpoint, consulta):
+    time.sleep(2.2)
+    saida = subprocess.run(["gh", "api", "-X", "GET", f"search/{endpoint}", "-f", f"q={consulta}", "-f", "per_page=1"],
+                           capture_output=True, text=True, check=True)
+    return json.loads(saida.stdout)["total_count"]
+
+
+def commits_no_periodo(inicio, fim):
+    """Commits do usuário entre duas datas; divide o intervalo quando passa do limite de 1000 da busca."""
+    itens, total = buscar_search("commits", f"author:{USUARIO} author-date:{inicio.isoformat()}..{fim.isoformat()}")
+    if total > len(itens) and inicio < fim:
+        meio = inicio + (fim - inicio) / 2
+        return commits_no_periodo(inicio, meio) + commits_no_periodo(meio + timedelta(days=1), fim)
+    return itens
+
+
 def carregar():
     """Busca tudo na API e preenche as variáveis usadas pelas telas."""
     global CONTRIBUICOES_ANO, MES, ANO, PULL_REQUESTS, PRS_MERGEADOS, ESTRELAS, ISSUES
@@ -77,21 +110,45 @@ def carregar():
     user = dados["user"]
     ano, mes = user["ano"], user["mes"]
 
-    CONTRIBUICOES_ANO = f"{ano['contributionCalendar']['totalContributions']:,}".replace(",", ".")
+    hoje = agora.date()
+    um_ano = hoje - timedelta(days=365)
+    commits, vistos = [], set()
+    for i in range(0, 366, 31):
+        ini = um_ano + timedelta(days=i)
+        fim = min(ini + timedelta(days=30), hoje)
+        for c in commits_no_periodo(ini, fim):
+            if c["sha"] not in vistos:
+                vistos.add(c["sha"])
+                commits.append(c)
+
+    por_dia = {}
+    for c in commits:
+        dia = c["commit"]["author"]["date"][:10]
+        por_dia[dia] = por_dia.get(dia, 0) + 1
+
+    prs_ano = contar_search("issues", f"is:pr author:{USUARIO} created:>={um_ano.isoformat()}")
+    calendario = ano["contributionCalendar"]
+    for semana in calendario["weeks"]:
+        for d in semana["contributionDays"]:
+            d["contributionCount"] = max(d["contributionCount"], por_dia.get(d["date"], 0))
+
+    total_ano = max(calendario["totalContributions"], len(commits) + prs_ano + ano["totalIssueContributions"])
+    CONTRIBUICOES_ANO = f"{total_ano:,}".replace(",", ".")
     MES, ANO = MESES[agora.month - 1], agora.year
-    PULL_REQUESTS = mes["totalPullRequestContributions"]
+    PULL_REQUESTS = contar_search("issues", f"is:pr author:{USUARIO} created:>={inicio_mes.date().isoformat()}")
     PRS_MERGEADOS = dados["merged"]["issueCount"]
     ISSUES = ano["totalIssueContributions"]
-    REPOS_CONTRIBUIDOS = user["repositoriesContributedTo"]["totalCount"]
+    REPOS_CONTRIBUIDOS = max(user["repositoriesContributedTo"]["totalCount"], len({c["repository"]["full_name"] for c in commits}))
     ESTRELAS = sum(r["stargazerCount"] for r in user["repositories"]["nodes"])
     HORA = agora.strftime("%H:%M")
     ATUALIZADO = agora.strftime("%d/%m %H:%M")
 
-    COMMITS = sorted(
-        ((r["repository"]["owner"]["login"], r["repository"]["name"], r["contributions"]["totalCount"])
-         for r in mes["commitContributionsByRepository"]),
-        key=lambda x: -x[2],
-    )
+    por_repo = {}
+    for c in commits:
+        if c["commit"]["author"]["date"][:7] == inicio_mes.strftime("%Y-%m"):
+            chave = (c["repository"]["owner"]["login"], c["repository"]["name"])
+            por_repo[chave] = por_repo.get(chave, 0) + 1
+    COMMITS = sorted(((o, r, n) for (o, r), n in por_repo.items()), key=lambda x: -x[2])
     for org, _, _ in COMMITS:
         if org not in CORES_ORG:
             CORES_ORG[org] = PALETA_EXTRA[len(CORES_ORG) % len(PALETA_EXTRA)]
@@ -105,8 +162,8 @@ def carregar():
     soma = sum(tamanhos.values()) or 1
     LINGUAGENS = [(n, 100 * t / soma, cores[n]) for n, t in sorted(tamanhos.items(), key=lambda x: -x[1])[:8]]
 
-    col = {"totalCommitContributions": ano["totalCommitContributions"], "contributionCalendar": ano["contributionCalendar"]}
-    dias = [d for w in ano["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
+    col = {"totalCommitContributions": max(ano["totalCommitContributions"], len(commits)), "contributionCalendar": calendario}
+    dias = [d for w in calendario["weeks"] for d in w["contributionDays"]]
     return col, dias
 
 
@@ -209,7 +266,7 @@ def tela_sequencia(t, col, dias):
         y = 438 + (i % 7) * 16
         celulas.append(f'<rect class="pop" x="{x}" y="{y}" width="13" height="13" rx="3" fill="{cores[nivel]}" style="{t.d(0.6 + (i // 7) * 0.06)}" />')
 
-    linhas = [("Contribuições públicas", str(total)), ("Sequência atual", f"{atual} dias"), ("Recorde", f"{fmt_data(ini)} – {fmt_data(fim)}")]
+    linhas = [("Contribuições no ano", CONTRIBUICOES_ANO), ("Sequência atual", f"{atual} dias"), ("Recorde", f"{fmt_data(ini)} – {fmt_data(fim)}")]
     texto_linhas = "".join(
         f"""
       <g class="up" style="{t.d(0.4 + i * 0.1)}">
@@ -264,7 +321,7 @@ def tela_estatisticas(t, col, dias):
     return f"""{cabecalho("GITHUB", "Estatísticas")}
       <g class="up" style="{t.d(0.1)}">
         <text x="{X0 - 2}" y="206" font-size="58" font-weight="800" fill="url(#texto)" filter="url(#glow)">{commits}</text>
-        <text x="{X0}" y="226" font-size="11" fill="#8B949E">commits públicos no último ano</text>
+        <text x="{X0}" y="226" font-size="11" fill="#8B949E">commits no último ano</text>
       </g>
       <path class="fade" d="{area}" fill="url(#area)" style="{t.d(0.6)}" />
       <path class="draw" d="{linha}" pathLength="1" fill="none" stroke="#39D353" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" style="{t.d(0.2)}" />
