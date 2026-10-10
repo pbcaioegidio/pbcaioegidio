@@ -101,7 +101,7 @@
       </g>
       <g class="up" style="animation-delay: 0.70s">
         <circle class="beat" cx="78" cy="540" r="3.5" fill="#39D353" />
-        <text class="mono" x="88" y="544" font-size="10" fill="#8B949E">ao vivo · atualizado 10/10 03:55</text>
+        <text class="mono" x="88" y="544" font-size="10" fill="#8B949E">ao vivo · atualizado 10/10 10:31</text>
       </g>
     </g>
     <g class="tela" style="animation-delay: -20.00s">
@@ -310,7 +310,7 @@
       </g>
     </g>
     </g>
-    <text class="mono" x="80" y="62" font-size="12" font-weight="700" fill="#F0F6FC">03:55</text>
+    <text class="mono" x="80" y="62" font-size="12" font-weight="700" fill="#F0F6FC">10:31</text>
     <rect x="162.0" y="44" width="96" height="28" rx="14" fill="#000000" />
     <circle cx="240.0" cy="58" r="4" fill="#1F2A3A" />
     <path d="M288 62 h3 v-3 h-3z M293 62 h3 v-6 h-3z M298 62 h3 v-9 h-3z" fill="#F0F6FC" />
