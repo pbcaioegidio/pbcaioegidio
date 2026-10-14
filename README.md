@@ -48,13 +48,3 @@ Desenvolvedor **Full Stack & Mobile**, formado em **Análise e Desenvolvimento d
 | **Infra / DevOps** | Docker, Docker Compose, Linux, WSL 2, Shell (Bash), PowerShell, Git, GitHub, GitHub Actions (CI/CD), deploy em VPS / Hostinger / Oracle Cloud |
 
 </details>
-
----
-
-<p>
-  <b>📊 Atividade no GitHub</b>
-</p>
-
-<p align="center">
-  <img src="./assets/celular.svg" width="420" alt="Celular mostrando a atividade no GitHub" />
-</p>
